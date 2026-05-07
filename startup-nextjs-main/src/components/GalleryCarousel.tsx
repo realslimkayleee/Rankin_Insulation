@@ -90,7 +90,7 @@ export default function GalleryCarousel({ images }: { images: Image[] }) {
       </div>
       
       {/* Keyboard Hint */}
-      <div className="mt-4 flex items-center justify-center gap-2 text-slate-500 text-sm opacity-80 hover:opacity-100 transition-opacity">
+      <div className="mt-4 hidden md:flex items-center justify-center gap-2 text-slate-500 text-sm opacity-80 hover:opacity-100 transition-opacity">
         <span className="material-symbols-outlined text-base">keyboard</span>
         <span>Hover over the gallery and use your arrow keys to scroll manually</span>
       </div>

@@ -31,26 +31,26 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-pattern">
+        <section className="relative h-[100svh] min-h-[500px] flex items-center pt-16 md:pt-20 pb-16 md:pb-0 overflow-hidden bg-pattern">
           <div className="absolute inset-0 bg-gradient-to-br from-background via-surface-container-low to-background z-0"></div>
-          <div className="max-w-7xl mx-auto px-12 relative z-10 grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <h1 className="font-headline-xl text-headline-xl text-white">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="space-y-4 md:space-y-8 flex flex-col items-center md:items-start text-center md:text-left">
+              <h1 className="font-headline-lg md:font-headline-xl text-3xl md:text-headline-xl text-white">
                 Expert Insulation for a <span className="text-primary">Lifetime of Comfort</span>
               </h1>
-              <p className="text-body-lg text-slate-400 max-w-lg">
+              <p className="text-sm md:text-body-lg text-slate-400 max-w-lg">
                 Trusted protection, built by a family that treats your home like our own. Where technical expertise meets genuine craftsmanship.
               </p>
-              <div className="flex flex-wrap gap-4 pt-4">
-                <a href="#contact" className="bg-primary text-on-primary font-bold px-8 py-4 rounded-xl flex items-center gap-3 hover:shadow-2xl hover:shadow-primary/40 transition-all border-b-2 border-tertiary-container/20 inline-flex w-fit">
+              <div className="flex flex-wrap gap-4 pt-2 md:pt-4 justify-center md:justify-start">
+                <a href="#contact" className="bg-primary text-on-primary font-bold px-6 py-3 md:px-8 md:py-4 rounded-xl flex items-center gap-2 md:gap-3 hover:shadow-2xl hover:shadow-primary/40 transition-all border-b-2 border-tertiary-container/20 inline-flex w-fit text-sm md:text-base">
                   Request a Quote
-                  <span className="material-symbols-outlined">arrow_forward</span>
+                  <span className="material-symbols-outlined text-lg md:text-xl">arrow_forward</span>
                 </a>
               </div>
             </div>
-            <div className="relative p-4 md:p-12">
-              <div className="aspect-square bg-surface-container-highest rounded-full blur-3xl opacity-20 absolute -top-20 -right-20"></div>
-              <div className="relative bg-surface-container p-4 rounded-full border border-white/10 shadow-2xl">
+            <div className="relative p-2 md:p-12 w-full max-w-[40vh] md:max-w-none mx-auto">
+              <div className="aspect-square bg-surface-container-highest rounded-full blur-3xl opacity-20 absolute -top-10 md:-top-20 -right-10 md:-right-20"></div>
+              <div className="relative bg-surface-container p-2 md:p-4 rounded-full border border-white/10 shadow-2xl">
                 <div className="rounded-full overflow-hidden aspect-square border-4 border-primary/20">
                   <img 
                     className="w-full h-full object-cover object-left scale-150 origin-left" 
@@ -60,8 +60,8 @@ export default function Home() {
                 </div>
               </div>
               {/* Stats Floating Card */}
-              <div className="absolute top-0 left-0 md:top-6 md:left-2 z-20 bg-surface-container-high p-6 rounded-xl border border-primary/30 shadow-xl">
-                <div className="flex items-center gap-4">
+              <div className="absolute top-0 left-0 md:top-6 md:left-2 z-20 bg-surface-container-high p-4 md:p-6 rounded-xl border border-primary/30 shadow-xl scale-75 md:scale-100 origin-top-left">
+                <div className="flex items-center gap-3 md:gap-4">
                   <div className="h-12 w-12 bg-primary/20 rounded-lg flex items-center justify-center">
                     <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
                   </div>
@@ -73,13 +73,14 @@ export default function Home() {
               </div>
             </div>
           </div>
-          
           {/* Scroll Down Indicator */}
-          <div className="absolute bottom-8 left-0 w-full flex justify-center z-20">
-            <div className="animate-bounce flex flex-col items-center gap-2">
-              <a href="#insulation" className="text-slate-400 text-xs font-bold uppercase tracking-widest hover:text-primary transition-colors flex flex-col items-center text-center">
-                View Our Services
-                <span className="material-symbols-outlined mt-2 text-2xl">keyboard_arrow_down</span>
+          <div className="absolute top-0 left-0 w-full h-[100svh] pointer-events-none z-30 flex flex-col justify-end items-center pb-6 md:pb-8">
+            <div className="pointer-events-auto flex flex-col items-center gap-2 bg-surface-container-high/80 md:bg-transparent backdrop-blur-md md:backdrop-blur-none px-6 py-3 rounded-3xl border border-white/5 md:border-transparent group">
+              <a href="#insulation" className="text-slate-300 md:text-slate-400 text-xs font-bold uppercase tracking-widest group-hover:text-primary transition-colors flex flex-col items-center text-center drop-shadow-md">
+                Scroll Down
+                <div className="w-5 h-8 border-[2px] border-current rounded-full mt-2 md:mt-3 flex justify-center pt-1.5 opacity-70 group-hover:opacity-100 transition-opacity relative">
+                  <div className="w-1 h-2 bg-current rounded-full animate-scroll-wheel"></div>
+                </div>
               </a>
             </div>
           </div>
@@ -262,12 +263,12 @@ export default function Home() {
             </div>
             
             <GalleryCarousel images={[
-              { src: "/IMG_9486.JPEG", alt: "Insulation Project" },
-              { src: "/IMG_9487.JPEG", alt: "Insulation Project" },
-              { src: "/IMG_9488.JPG", alt: "Insulation Project" },
               { src: "/gallery-cc-painted-1.jpg", alt: "Closed Cell Painted" },
               { src: "/gallery-cc-painted-2.jpg", alt: "Closed Cell Painted" },
               { src: "/gallery-cc-1.jpg", alt: "Closed Cell Insulation" },
+              { src: "/IMG_9486.JPEG", alt: "Insulation Project" },
+              { src: "/IMG_9487.JPEG", alt: "Insulation Project" },
+              { src: "/IMG_9488.JPG", alt: "Insulation Project" },
               { src: "/gallery-cc-2.jpg", alt: "Closed Cell Insulation" },
               { src: "/gallery-oc-painted-1.jpg", alt: "Open Cell Painted" },
               { src: "/gallery-oc-painted-2.jpg", alt: "Open Cell Painted" },
