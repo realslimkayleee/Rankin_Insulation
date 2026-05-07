@@ -40,7 +40,7 @@ export default function HomePage() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative h-[100svh] min-h-[500px] flex items-center pt-16 md:pt-20 pb-16 md:pb-0 overflow-hidden bg-pattern">
+        <section className="relative h-[100svh] min-h-[650px] flex items-center pt-[100px] pb-24 md:pt-[120px] md:pb-0 overflow-hidden bg-pattern">
           <div className="absolute inset-0 bg-gradient-to-br from-[#111415] via-[#191c1d] to-[#111415] z-0"></div>
           <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-4 md:space-y-8 flex flex-col items-center md:items-start text-center md:text-left">
