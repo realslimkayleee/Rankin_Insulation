@@ -1,7 +1,7 @@
 {
   "framework": "vite",
-  "buildCommand": "pnpm -r --filter @workspace/rankin-insulation run build && node -e \"require('fs').cpSync('artifacts/rankin-insulation/dist/public', 'public', {recursive: true})\"",
-  "outputDirectory": "public",
+  "buildCommand": "pnpm -r --filter @workspace/rankin-insulation run build",
+  "outputDirectory": "artifacts/rankin-insulation/dist/public",
   "rewrites": [
     {
       "source": "/(.*)",
