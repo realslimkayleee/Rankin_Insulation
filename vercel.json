@@ -1,18 +1,10 @@
 {
-  "builds": [
+  "buildCommand": "pnpm -r --filter @workspace/rankin-insulation run build",
+  "outputDirectory": "artifacts/rankin-insulation/dist/public",
+  "rewrites": [
     {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "public"
-      }
-    }
-  ],
-  "routes": [
-    { "handle": "filesystem" },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
