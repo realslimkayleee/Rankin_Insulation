@@ -60,6 +60,7 @@ export default function ImageCarousel({ images }: ImageCarouselProps) {
             <img
               src={image.src}
               alt={image.alt}
+              loading="lazy"
               className="w-full h-full object-cover"
             />
           </div>

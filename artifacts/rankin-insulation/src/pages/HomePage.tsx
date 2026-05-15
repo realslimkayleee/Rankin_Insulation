@@ -8,7 +8,7 @@ export default function HomePage() {
       <header className="fixed top-0 w-full z-50 bg-[#0E1525] border-b border-white/10 shadow-xl shadow-navy-900/20">
         <nav className="flex justify-between items-center px-6 md:px-12 h-20 w-full max-w-7xl mx-auto font-medium tracking-tight">
           <div className="flex items-center gap-4">
-            <img src="/logo.png" alt="Rankin Insulation" className="h-10 w-auto" />
+            <img src="/logo.webp" alt="Rankin Insulation" className="h-10 w-auto" />
           </div>
           <div className="hidden md:flex items-center space-x-8">
             <a className="text-slate-300 font-bold hover:text-[#00AEEF] transition-all duration-300" href="#insulation">Insulation</a>
@@ -40,7 +40,7 @@ export default function HomePage() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative h-[100svh] min-h-[650px] flex items-center pt-[100px] pb-24 md:pt-[120px] md:pb-0 overflow-hidden bg-pattern">
+        <section className="relative min-h-[100svh] flex items-center pt-[100px] pb-24 md:pt-[120px] md:pb-0 overflow-hidden bg-pattern">
           <div className="absolute inset-0 bg-gradient-to-br from-[#111415] via-[#191c1d] to-[#111415] z-0"></div>
           <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-4 md:space-y-8 flex flex-col items-center md:items-start text-center md:text-left">
@@ -67,7 +67,7 @@ export default function HomePage() {
                   <img
                     className="w-full h-full object-cover object-left scale-150 origin-left"
                     alt="Professional insulation contractor"
-                    src="/IMG_7200.jpg"
+                    src="/IMG_7200.webp"
                   />
                 </div>
               </div>
@@ -89,10 +89,11 @@ export default function HomePage() {
           <div className="absolute top-0 left-0 w-full h-[100svh] pointer-events-none z-30 flex flex-col justify-end items-center pb-6 md:pb-8">
             <div className="pointer-events-auto flex flex-col items-center gap-2 bg-[#282a2b]/80 md:bg-transparent backdrop-blur-md md:backdrop-blur-none px-6 py-3 rounded-3xl border border-white/5 md:border-transparent group">
               <a href="#insulation" className="text-slate-300 md:text-slate-400 text-xs font-bold uppercase tracking-widest group-hover:text-[#82cfff] transition-colors flex flex-col items-center text-center drop-shadow-md">
-                Scroll Down
-                <div className="w-5 h-8 border-[2px] border-current rounded-full mt-2 md:mt-3 flex justify-center pt-1.5 opacity-70 group-hover:opacity-100 transition-opacity relative">
+                <span className="hidden md:block">Scroll Down</span>
+                <div className="hidden md:flex w-5 h-8 border-[2px] border-current rounded-full mt-2 md:mt-3 justify-center pt-1.5 opacity-70 group-hover:opacity-100 transition-opacity relative">
                   <div className="w-1 h-2 bg-current rounded-full animate-scroll-wheel"></div>
                 </div>
+                <span className="md:hidden material-symbols-outlined text-3xl animate-bounce">keyboard_arrow_down</span>
               </a>
             </div>
           </div>
@@ -129,9 +130,9 @@ export default function HomePage() {
                 </ul>
                 <ImageCarousel
                   images={[
-                    { src: '/IMG_1419.jpg', alt: 'Closed Cell Insulation Application' },
-                    { src: '/IMG_1420.jpg', alt: 'Closed Cell Insulation Details' },
-                    { src: '/IMG_1421.jpg', alt: 'Closed Cell Insulation Finish' },
+                    { src: '/IMG_1419.webp', alt: 'Closed Cell Insulation Application' },
+                    { src: '/IMG_1420.webp', alt: 'Closed Cell Insulation Details' },
+                    { src: '/IMG_1421.webp', alt: 'Closed Cell Insulation Finish' },
                   ]}
                 />
               </div>
@@ -157,9 +158,9 @@ export default function HomePage() {
                 </ul>
                 <ImageCarousel
                   images={[
-                    { src: '/IMG_0444.jpg', alt: 'Open Cell Insulation Application' },
-                    { src: '/IMG_0499.jpg', alt: 'Open Cell Insulation Details' },
-                    { src: '/IMG_2224.jpg', alt: 'Open Cell Insulation Finish' },
+                    { src: '/IMG_0444.webp', alt: 'Open Cell Insulation Application' },
+                    { src: '/IMG_0499.webp', alt: 'Open Cell Insulation Details' },
+                    { src: '/IMG_2224.webp', alt: 'Open Cell Insulation Finish' },
                   ]}
                 />
               </div>
@@ -174,19 +175,18 @@ export default function HomePage() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="order-2 lg:order-1 flex flex-col gap-4">
                 <div className="relative rounded-2xl overflow-hidden border-2 border-white/10 aspect-video group">
-                  <img
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  <img loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     alt="Insulation Removal Process"
-                    src="/IMG_1066.jpg"
+                    src="/IMG_1066.webp"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="relative rounded-2xl overflow-hidden border-2 border-white/10 aspect-video group">
-                    <img className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Insulation Removal Detail" src="/IMG_1068.jpg" />
+                    <img loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Insulation Removal Detail" src="/IMG_1068.webp" />
                   </div>
                   <div className="relative rounded-2xl overflow-hidden border-2 border-white/10 aspect-video group">
-                    <img className="w-full h-full object-cover object-[center_75%] transition-transform duration-700 group-hover:scale-110" alt="Insulation Removal Aftermath" src="/IMG_1071.jpg" />
+                    <img loading="lazy" className="w-full h-full object-cover object-[center_75%] transition-transform duration-700 group-hover:scale-110" alt="Insulation Removal Aftermath" src="/IMG_1071.webp" />
                   </div>
                 </div>
               </div>
@@ -234,11 +234,11 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold text-white mb-8 text-center group-hover/card:text-[#82cfff] transition-colors">Closed Cell Painted</h3>
                 <div className="grid gap-6">
                   <div className="relative rounded-xl overflow-hidden group aspect-video border border-white/10 hover:border-[#82cfff]/50 transition-colors">
-                    <img src="/IMG_3626.jpg" alt="Closed Cell Painted Application" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img loading="lazy" src="/IMG_3626.webp" alt="Closed Cell Painted Application" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
                   </div>
                   <div className="relative rounded-xl overflow-hidden group aspect-video border border-white/10 hover:border-[#82cfff]/50 transition-colors">
-                    <img src="/IMG_1461.jpg" alt="Closed Cell Painted Detail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img loading="lazy" src="/IMG_1461.webp" alt="Closed Cell Painted Detail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
                   </div>
                 </div>
@@ -247,11 +247,11 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold text-white mb-8 text-center group-hover/card:text-[#82cfff] transition-colors">Open Cell Painted</h3>
                 <div className="grid gap-6">
                   <div className="relative rounded-xl overflow-hidden group aspect-video border border-white/10 hover:border-[#82cfff]/50 transition-colors">
-                    <img src="/IMG_4621.jpg" alt="Open Cell Painted Application" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img loading="lazy" src="/IMG_4621.webp" alt="Open Cell Painted Application" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
                   </div>
                   <div className="relative rounded-xl overflow-hidden group aspect-video border border-white/10 hover:border-[#82cfff]/50 transition-colors">
-                    <img src="/IMG_4629.jpg" alt="Open Cell Painted Detail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img loading="lazy" src="/IMG_4629.webp" alt="Open Cell Painted Detail" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
                   </div>
                 </div>
@@ -273,17 +273,17 @@ export default function HomePage() {
             </div>
 
             <GalleryCarousel images={[
-              { src: '/gallery-cc-painted-1.jpg', alt: 'Closed Cell Painted' },
-              { src: '/gallery-cc-painted-2.jpg', alt: 'Closed Cell Painted' },
-              { src: '/gallery-cc-1.jpg', alt: 'Closed Cell Insulation' },
-              { src: '/IMG_9486.JPEG', alt: 'Insulation Project' },
-              { src: '/IMG_9487.JPEG', alt: 'Insulation Project' },
-              { src: '/IMG_9488.JPG', alt: 'Insulation Project' },
-              { src: '/gallery-cc-2.jpg', alt: 'Closed Cell Insulation' },
-              { src: '/gallery-oc-painted-1.jpg', alt: 'Open Cell Painted' },
-              { src: '/gallery-oc-painted-2.jpg', alt: 'Open Cell Painted' },
-              { src: '/gallery-oc-1.jpg', alt: 'Open Cell Insulation' },
-              { src: '/gallery-oc-2.jpg', alt: 'Open Cell Insulation' },
+              { src: '/gallery-cc-painted-1.webp', alt: 'Closed Cell Painted' },
+              { src: '/gallery-cc-painted-2.webp', alt: 'Closed Cell Painted' },
+              { src: '/gallery-cc-1.webp', alt: 'Closed Cell Insulation' },
+              { src: '/IMG_9486.webp', alt: 'Insulation Project' },
+              { src: '/IMG_9487.webp', alt: 'Insulation Project' },
+              { src: '/IMG_9488.webp', alt: 'Insulation Project' },
+              { src: '/gallery-cc-2.webp', alt: 'Closed Cell Insulation' },
+              { src: '/gallery-oc-painted-1.webp', alt: 'Open Cell Painted' },
+              { src: '/gallery-oc-painted-2.webp', alt: 'Open Cell Painted' },
+              { src: '/gallery-oc-1.webp', alt: 'Open Cell Insulation' },
+              { src: '/gallery-oc-2.webp', alt: 'Open Cell Insulation' },
             ]} />
           </div>
         </section>
@@ -337,7 +337,7 @@ export default function HomePage() {
       <footer className="bg-[#0E1525] border-t border-white/5">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center py-12 px-6 md:px-12 font-['Work_Sans'] text-sm text-slate-400">
           <div className="flex flex-col items-center md:items-start gap-4 mb-8 md:mb-0">
-            <img src="/logo.png" alt="Rankin Insulation" className="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity" />
+            <img src="/logo.webp" alt="Rankin Insulation" className="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity" />
           </div>
           <div className="flex gap-4">
             <a
