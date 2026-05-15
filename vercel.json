@@ -2,10 +2,7 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "artifacts/rankin-insulation/dist/public"
-      }
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
