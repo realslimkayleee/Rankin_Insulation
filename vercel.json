@@ -1,4 +1,5 @@
 {
+  "framework": "vite",
   "buildCommand": "pnpm -r --filter @workspace/rankin-insulation run build",
   "outputDirectory": "artifacts/rankin-insulation/dist/public",
   "rewrites": [
